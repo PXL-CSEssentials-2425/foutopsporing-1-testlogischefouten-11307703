@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Oefening_1___Test_Logische_Foute</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="zee0.jpg" />
+    <None Remove="zee1.jpg" />
+    <None Remove="zee2.jpg" />
+    <None Remove="zee3.jpg" />
+    <None Remove="zee4.jpg" />
+    <None Remove="zee5.jpg" />
+    <None Remove="zee6.jpg" />
+    <None Remove="zee7.jpg" />
+    <None Remove="zee8.jpg" />
+    <None Remove="zee9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="zee0.jpg" />
+    <Resource Include="zee1.jpg" />
+    <Resource Include="zee2.jpg" />
+    <Resource Include="zee3.jpg" />
+    <Resource Include="zee4.jpg" />
+    <Resource Include="zee5.jpg" />
+    <Resource Include="zee6.jpg" />
+    <Resource Include="zee7.jpg" />
+    <Resource Include="zee8.jpg" />
+    <Resource Include="zee9.jpg" />
+  </ItemGroup>
+
+</Project>
