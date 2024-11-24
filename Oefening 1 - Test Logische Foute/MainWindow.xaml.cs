@@ -112,26 +112,23 @@ namespace Oefening_1___Test_Logische_Foute
 
         private void showImageButton_Click(object sender, RoutedEventArgs e)
         {
-            int rndNumber = random.Next(0, 10);
-            string imagePath = System.IO.Path.Combine(imageFolderPath, $"zee{rndNumber}.jpg");
-            image.Source = new BitmapImage(new Uri(imagePath));
+            int rndNumber = random.Next(0, 10);       
+            image.Source = new BitmapImage(new Uri($"pack://application:,,,/zee{rndNumber}.jpg"));
         }
 
         private void showImageWithCheckButton_Click(object sender, RoutedEventArgs e)
         {
-            int rndNumber = random.Next(0, 10);
-            string imagePath = System.IO.Path.Combine(imageFolderPath, $"zee{rndNumber}.jpg");
-            image.Source = new BitmapImage(new Uri(imagePath));
+           
             try
             {
-                if (File.Exists(imagePath))
+                int rndNumber = random.Next(0, 10);
+                image.Source = new BitmapImage(new Uri($"pack://application:,,,/zee{rndNumber}.jpg", UriKind.Absolute));
+
+                if (File.Exists(image.Source.ToString()))
                 {
-                    image.Source = new BitmapImage(new Uri(imagePath));
+                    MessageBox.Show("Afbeelding is ingeladen");
                 }
-                else
-                {
-                    MessageBox.Show("Afbeelding niet gevonden");
-                }
+              
             }
             catch (FileNotFoundException ex)
             {
